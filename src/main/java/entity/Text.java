@@ -1,50 +1,47 @@
 package entity;
 
-import org.boon.Str;
-
 import java.util.ArrayList;
 import java.util.List;
-import java.util.StringTokenizer;
 
 /**
- * Created by Pavel on 10.06.2015.
+ * Created by Pavel on 18.06.2015.
  */
-public class Word extends AbstractComposite<Symbol> implements Composite<Symbol> {
-    private String word;
+public class Text extends AbstractComposite<Paragraph> implements Composite<Paragraph> {
+    private List<Paragraph> text = new ArrayList<>();
 
-    public Word(){}
+    public Text(){}
 
-    public Word(String word) {
-        this.word=word;
+    public Text(List<Paragraph> paragraphs){
+        super(paragraphs);
     }
 
     @Override
-    public void add(Symbol element) {
+    public void add(Paragraph element) {
         super.add(element);
     }
 
     @Override
-    public Symbol getPart() {
+    public Paragraph getPart() {
         return null;
     }
 
     @Override
-    public boolean contains(Symbol element) {
+    public boolean contains(Paragraph element) {
         return false;
     }
 
     @Override
-    public Symbol get(int index) {
+    public Paragraph get(int index) {
         return null;
     }
 
     @Override
-    public Symbol remove(int index) {
+    public Paragraph remove(int index) {
         return null;
     }
 
     @Override
-    public Symbol remove(Symbol element) {
+    public Paragraph remove(Paragraph element) {
         return null;
     }
 
