@@ -1,5 +1,7 @@
 package entity;
 
+import org.boon.Str;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -7,7 +9,7 @@ import java.util.List;
  * Created by Pavel on 18.06.2015.
  */
 public class Text extends AbstractComposite<Paragraph> implements Composite<Paragraph> {
-    private List<Paragraph> text = new ArrayList<>();
+    private List<String> paragraphs= new ArrayList<>();
 
     public Text(){}
 
@@ -31,6 +33,11 @@ public class Text extends AbstractComposite<Paragraph> implements Composite<Para
     }
 
     @Override
+    public void add(String s) {
+        paragraphs.add(s);
+    }
+
+    @Override
     public Paragraph get(int index) {
         return null;
     }
@@ -47,11 +54,6 @@ public class Text extends AbstractComposite<Paragraph> implements Composite<Para
 
     @Override
     public String completeString() {
-        return null;
+        return super.completeString();
     }
-
-//    @Override
-//    public String completeString() {
-//        return super.completeString();
-//    }
 }

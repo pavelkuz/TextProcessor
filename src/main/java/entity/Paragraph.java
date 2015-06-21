@@ -7,13 +7,9 @@ import java.util.List;
  * Created by Pavel on 18.06.2015.
  */
 public class Paragraph extends AbstractComposite<Sentence> implements Composite<Sentence> {
-    private String paragraph;
+    private List<String> sentences = new ArrayList<>();
 
     public Paragraph(){}
-
-    public Paragraph(String paragraph) {
-        this.paragraph=paragraph;
-    }
 
     @Override
     public Sentence getPart() {
@@ -27,6 +23,11 @@ public class Paragraph extends AbstractComposite<Sentence> implements Composite<
     @Override
     public boolean contains(Sentence element) {
         return false;
+    }
+
+    @Override
+    public void add(String s) {
+        sentences.add(s);
     }
 
     @Override

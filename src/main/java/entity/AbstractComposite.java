@@ -20,13 +20,13 @@ public abstract class AbstractComposite<E extends Component> implements Composit
         composite.add(element);
     }
 
-//    public String completeString() {
-//        StringBuilder sb = new StringBuilder();
-//        for (E element : composite) {
-//            sb.append(element.toString());
-//        }
-//        return sb.toString();
-//    }
+    public String completeString() {
+        StringBuilder sb = new StringBuilder();
+        for (E element : composite) {
+            sb.append(element.toString());
+        }
+        return sb.toString();
+    }
 
     @Override
     public String toString() {

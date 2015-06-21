@@ -9,14 +9,11 @@ import java.util.StringTokenizer;
 /**
  * Created by Pavel on 10.06.2015.
  */
-public class Word extends AbstractComposite<Symbol> implements Composite<Symbol> {
-    private String word;
+public class SentencePart extends AbstractComposite<Symbol> implements Composite<Symbol> {
+    private List<String> symbols = new ArrayList<>();
 
-    public Word(){}
+    public SentencePart(){}
 
-    public Word(String word) {
-        this.word=word;
-    }
 
     @Override
     public void add(Symbol element) {
@@ -31,6 +28,11 @@ public class Word extends AbstractComposite<Symbol> implements Composite<Symbol>
     @Override
     public boolean contains(Symbol element) {
         return false;
+    }
+
+    @Override
+    public void add(String s) {
+        symbols.add(s);
     }
 
     @Override
@@ -50,11 +52,6 @@ public class Word extends AbstractComposite<Symbol> implements Composite<Symbol>
 
     @Override
     public String completeString() {
-        return null;
+        return super.completeString();
     }
-
-//    @Override
-//    public String completeString() {
-//        return super.completeString();
-//    }
 }
