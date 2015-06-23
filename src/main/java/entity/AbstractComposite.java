@@ -1,32 +1,34 @@
 package entity;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**
  * Created by Pavel on 18.06.2015.
  */
 public abstract class AbstractComposite<E extends Component> implements Composite<E> {
-    private List<E> composite = new ArrayList<>();
+    private List<E> elements;
 
-    public AbstractComposite(List<E> textElement){
-        this.composite = textElement;
-    }
+    //private E elements;
 
-    public AbstractComposite(){}
+//    public AbstractComposite(E elements) {
+//        this.elements = elements;
+//    }
+
+//    public AbstractComposite() {
+//    }
 
     @Override
     public void add(E element) {
-        composite.add(element);
+        elements.add(element);
     }
 
-    public String completeString() {
-        StringBuilder sb = new StringBuilder();
-        for (E element : composite) {
-            sb.append(element.toString());
-        }
-        return sb.toString();
-    }
+//    public String completeString() {
+//        StringBuilder sb = new StringBuilder();
+//        for (E element : elements) {
+//            sb.append(element.toString());
+//        }
+//        return sb.toString();
+//    }
 
     @Override
     public String toString() {

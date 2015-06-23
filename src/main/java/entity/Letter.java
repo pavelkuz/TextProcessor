@@ -4,11 +4,13 @@ package entity;
  * Created by Pavel on 12.06.2015.
  */
 public class Letter extends Symbol {
-    private boolean letterCase;
+    private String letter;
+    private boolean isUpperCase;
 
-    public Letter(char symbol, boolean letterCase) {
-        super(symbol);
-        this.letterCase=letterCase;
+    public Letter(String letter, boolean isUpperCase) {
+        super();
+        this.letter=letter;
+        this.isUpperCase = isUpperCase;
     }
 
     @Override
@@ -16,8 +18,8 @@ public class Letter extends Symbol {
         return super.getSymbol();
     }
 
-    private boolean isUpperCase(String symbol){
-        if(symbol!=symbol.toUpperCase())
+    private boolean isUpperCase(String letter) {
+        if (letter != letter.toUpperCase())
             return false;
         else return true;
     }
@@ -33,11 +35,6 @@ public class Letter extends Symbol {
     }
 
     @Override
-    public void add(Symbol element) {
-
-    }
-
-    @Override
     public Symbol remove(int index) {
         return null;
     }
@@ -47,8 +44,8 @@ public class Letter extends Symbol {
         return null;
     }
 
-    @Override
-    public String completeString() {
-        return super.completeString();
-    }
+//    @Override
+//    public String completeString() {
+//        return super.completeString();
+//    }
 }

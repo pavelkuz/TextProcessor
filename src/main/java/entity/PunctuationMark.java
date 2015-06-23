@@ -5,14 +5,15 @@ package entity;
  */
 public class PunctuationMark extends Symbol {
     private boolean itSentenceEnd;
-    public PunctuationMark(char symbol,boolean itSentenceEnd) {
+
+    public PunctuationMark(char symbol, boolean itSentenceEnd) {
         super(symbol);
-        this.itSentenceEnd=itSentenceEnd;
+        this.itSentenceEnd = itSentenceEnd;
     }
 
-    public boolean isItSentenceEnd(char symbol){
-        if((symbol == '.') || (symbol == '!') || (symbol == '?'))
-            this.itSentenceEnd=true;
+    public boolean isItSentenceEnd(char symbol) {
+        if ((symbol == '.') || (symbol == '!') || (symbol == '?'))
+            this.itSentenceEnd = true;
         return itSentenceEnd;
     }
 
@@ -27,11 +28,6 @@ public class PunctuationMark extends Symbol {
     }
 
     @Override
-    public void add(Symbol element) {
-
-    }
-
-    @Override
     public Symbol remove(int index) {
         return null;
     }
@@ -41,8 +37,8 @@ public class PunctuationMark extends Symbol {
         return null;
     }
 
-    @Override
-    public String completeString() {
-        return super.completeString();
-    }
+//    @Override
+//    public String completeString() {
+//        return super.completeString();
+//    }
 }

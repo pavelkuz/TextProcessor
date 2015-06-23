@@ -3,13 +3,13 @@ package entity;
 /**
  * Created by Pavel on 10.06.2015.
  */
-public class Symbol implements Leaf<Symbol>{
+public class Symbol implements Leaf<Symbol> {
     private char symbol;
 
     public Symbol(){}
 
-    public Symbol(char symbol){
-        this.symbol=symbol;
+    public Symbol(char symbol) {
+        this.symbol = symbol;
     }
 
     public char getSymbol() {
@@ -31,11 +31,6 @@ public class Symbol implements Leaf<Symbol>{
     }
 
     @Override
-    public void add(Symbol element) {
-
-    }
-
-    @Override
     public Symbol remove(int index) {
         return null;
     }
@@ -45,8 +40,8 @@ public class Symbol implements Leaf<Symbol>{
         return null;
     }
 
-    @Override
-    public String completeString() {
-        return null;
-    }
+//    @Override
+//    public String completeString() {
+//        return null;
+//    }
 }

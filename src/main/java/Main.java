@@ -1,5 +1,4 @@
-import entity.Paragraph;
-import entity.Text;
+import entity.*;
 import org.boon.Boon;
 import util.TextParser;
 
